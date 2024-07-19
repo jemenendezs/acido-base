@@ -1,8 +1,6 @@
 # Estado acido base
 Este es un programa utilizado para calcular el estado ácido-base.
 
-¡Claro! Te explico cada parte del código:
-
 ### 1. **Función `obtener_parametro`**
 ```python
 def obtener_parametro(nombre):
