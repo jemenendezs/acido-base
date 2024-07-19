@@ -1,4 +1,4 @@
-# Estado acido base
+# Estado ácido base
 Este es un programa utilizado para calcular el estado ácido-base.
 
 ### 1. **Función `obtener_parametro`**
