@@ -1,10 +1,11 @@
 # Estado ácido base
-Este es un programa utilizado para calcular el estado ácido-base.
+Este código realiza un análisis del estado ácido-base del paciente, evaluando tanto trastornos primarios como posibles trastornos secundarios basados en la compensación esperada. La presentación de los resultados es clara y estructurada para facilitar la interpretación de los datos.
+
 
 ### 1. **Función `obtener_parametro`**
 ```python
 def obtener_parametro(nombre):
-    """Solicita un valor numérico al usuario y lo retorna."""
+    # Solicita un valor numérico al usuario y lo retorna.
     while True:
         try:
             valor = float(input(f"Ingrese el valor de {nombre}: "))
@@ -18,7 +19,7 @@ def obtener_parametro(nombre):
 ### 2. **Función `determinar_trastorno_primario`**
 ```python
 def determinar_trastorno_primario(pH, pCO2, HCO3):
-    """Determina el trastorno ácido-base primario basado en pH, pCO2 y HCO3."""
+    # Determina el trastorno ácido-base primario basado en pH, pCO2 y HCO3.
     if pH < 7.35:
         if pCO2 > 45:
             return "Acidosis respiratoria"
@@ -41,7 +42,7 @@ def determinar_trastorno_primario(pH, pCO2, HCO3):
 ### 3. **Función `calcular_compensacion`**
 ```python
 def calcular_compensacion(trastorno_primario, pCO2, HCO3, sodio, cloro):
-    """Calcula la compensación esperada y los parámetros de compensación."""
+    # Calcula la compensación esperada y los parámetros de compensación.
     resultados = []
     parametros_compensacion = {}
     ...
@@ -58,7 +59,7 @@ def calcular_compensacion(trastorno_primario, pCO2, HCO3, sodio, cloro):
 ### 4. **Función `determinar_trastorno_secundario`**
 ```python
 def determinar_trastorno_secundario(pCO2, HCO3, parametros_compensacion, trastorno_primario):
-    """Determina si hay un trastorno secundario basado en la compensación esperada."""
+    # Determina si hay un trastorno secundario basado en la compensación esperada.
     if trastorno_primario == "Acidosis metabólica":
         ...
     elif trastorno_primario == "Alcalosis metabólica":
@@ -75,7 +76,7 @@ def determinar_trastorno_secundario(pCO2, HCO3, parametros_compensacion, trastor
 ### 5. **Función `mostrar_resultados`**
 ```python
 def mostrar_resultados(trastorno_primario, resultados_compensacion, trastorno_secundario):
-    """Muestra los resultados del análisis en un formato legible."""
+    # Muestra los resultados del análisis en un formato legible.
     print("\n" + "*"*50)
     print("RESULTADOS:")
     print(f"* Trastorno primario: {trastorno_primario}")
@@ -109,5 +110,3 @@ if __name__ == "__main__":
 ```
 - **Propósito**: Ejecutar el flujo principal del programa.
 - **Cómo lo hace**: Llama a las funciones para obtener parámetros del usuario, determinar el trastorno primario, calcular la compensación, identificar el trastorno secundario y mostrar los resultados.
-
-Este código realiza un análisis del estado ácido-base del paciente, evaluando tanto trastornos primarios como posibles trastornos secundarios basados en la compensación esperada. La presentación de los resultados es clara y estructurada para facilitar la interpretación de los datos.
